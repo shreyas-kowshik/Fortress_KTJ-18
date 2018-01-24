@@ -72,6 +72,11 @@ void back() {
     stop();
 }
 
+void blink() {
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN,LOW);
+}
 
 void loop()
 {
@@ -98,6 +103,9 @@ void loop()
           back(); 
           delay(500);
           stop();
+       }
+       if(incomingByte == 'B') {
+          blink();
        }
     }
 }
